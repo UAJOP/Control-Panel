@@ -1,0 +1,97 @@
+main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 64px 1fr;
+
+
+    color: white;
+}
+
+main > nav {
+    grid-row: span 2;
+    backdrop-filter: brightness(0.5) blur(8px);
+
+    display: flex;
+    flex-direction: column;
+
+    animation: slide-right 0.4s ease-in-out;
+}
+
+main > nav > .profile-picture {
+    width: 75%;
+    margin: 32px auto 0 auto;
+}
+
+main > nav > .username {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 900;
+
+    margin: 16px 0 32px 0;
+}
+
+main > nav > a {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    grid-gap: 16px;
+    align-items: center;
+    padding: 16px 32px;
+    height: 64px;
+
+    transition: background-color 0.2s ease-in;
+}
+
+main > nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+main > nav > a > i {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+main > nav > a > span {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 400;
+}
+
+main > nav > a:nth-last-child(1) {
+    margin-top: auto;
+}
+
+
+main > .topbar {
+    backdrop-filter: brightness(0.6) blur(8px);
+
+    animation: slide-down 0.8s ease-in-out;
+}
+
+main > .topbar > h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 16px 0 16px 0;
+    text-align: center;
+}
+
+main > .page {
+    overflow: auto;
+    backdrop-filter: brightness(0.8);
+
+    animation: fade-in 0.8s ease-in-out;
+
+    padding: 32px;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-gap: 32px;
+}
+
+#dashboard > * {
+    grid-column: span 2;
+}
+

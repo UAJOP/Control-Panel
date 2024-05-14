@@ -1,0 +1,31 @@
+.login-form {
+    width: 280px;
+    margin: auto;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    animation: fade-in 0.4s ease-in-out;
+}
+
+.login-form > .profile-picture {
+    width: 160px;
+    margin-bottom: 16px;
+
+    transition: all 0.1s ease-in-out;
+    animation: pop-in 0.2s ease-in-out;
+}
+
+.login-form > .icon-input {
+    width: 100%;
+}
+
+.login-form > input:is([type="submit"]) {
+    margin-top: 16px;
+    width: 80%;
+}
